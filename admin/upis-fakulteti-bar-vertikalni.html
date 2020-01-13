@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+
+        <!--    ***********************************************************
+                *                                                         *
+                *              Univerzitet Singidunum Beograd             *
+                *                    Tehnički fakultet                    *
+                *          Softversko i informaciono inženjerstvo         *
+                *                                                         *
+                *                         Predmet                         *
+                *            Web bazirani informacioni sistemi            *
+                *                                                         *
+                *                         Predavač                        *
+                *             dr Miloš Dobrojević, dipl. ing.             *
+                *                                                         *
+                ***********************************************************        -->
+
+<head>
+	<title>Upis po fakultetima</title>
+	<script src="./js/Chart.bundle.js"></script>
+	<script src="./js/utils.js"></script>
+	<style>
+	canvas {
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+	}
+	</style>
+</head>
+
+<body>
+	<h1>Upis po fakultetima</h1>
+	<div id="container" style="width: 75%;">
+		<canvas id="canvas"></canvas>
+	</div>
+	<script>
+		var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+		var color = Chart.helpers.color;
+		var barChartData = {
+			labels:/* ['F1', 'F2', 'F3', 'F4', 'F8']*/MONTHS,
+			datasets: [{
+				label: 'Osnovne',
+				backgroundColor: color(window.chartColors.red).alpha(0.5).rgbString(),
+				borderColor: window.chartColors.red,
+				borderWidth: 1,
+				data: [
+					1, 2, 3, 4, 5
+				]
+			}, {
+				label: 'Master',
+				backgroundColor: color(window.chartColors.yellow).alpha(0.5).rgbString(),
+				borderColor: window.chartColors.blue,
+				borderWidth: 1,
+				data: [
+					1.5, 3, 4.5, 6, 7.5
+				]
+			}, {
+				label: 'Doktorske',
+				backgroundColor: color(window.chartColors.blue).alpha(0.5).rgbString(),
+				borderColor: window.chartColors.blue,
+				borderWidth: 1,
+				data: [
+					2, 4, 6, 8, 10
+				]
+			}]
+
+		};
+
+		window.onload = function() {
+			var ctx = document.getElementById('canvas').getContext('2d');
+			window.myBar = new Chart(ctx, {
+				type: 'bar',
+				data: barChartData,
+				options: {
+					responsive: true,
+					legend: {
+						position: 'top',
+					},
+					title: {
+						display: true,
+						text: 'Upis po fakultetima'
+					}
+				}
+			});
+
+		};
+	</script>
+</body>
+
+</html>
