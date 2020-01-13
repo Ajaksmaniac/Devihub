@@ -1,0 +1,367 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: red;
+}
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+
+h3 {
+    font-weight: 100;
+}
+
+/* LAYOUT CSS */
+ /* Fixed sidenav, full height */
+ .sidenav {
+    height: 100%;
+    width: 25%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(25, 107, 105);
+    overflow-x: hidden;
+    padding-top: 10px;
+    margin-top: 25%;
+  }
+  .sidenav a{
+	  color:red;
+  }
+  
+  /* Style the sidenav links and the dropdown button */
+  .sidenav a, .dropdown-btn {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: rgb(221,254,228);
+    display: block;
+    border: none;
+    background: none;
+    width:100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  /* On mouse-over */
+  .sidenav a:hover, .dropdown-btn:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Main content */
+  .main {
+    margin-left: 200px; /* Same as the width of the sidenav */
+    font-size: 50px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+  }
+  
+  /* Add an active class to the active dropdown button */
+  .active {
+    background-color: green;
+    color: white;
+  }
+  
+  /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+  .dropdown-container {
+    display: none;
+    background-color: #262626;
+    padding-left: 8px;
+  }
+#profile-picture{
+    margin-top: 0px;
+    height: 30%;
+    border: 1px solid black;
+    width: 200px;
+}
+  
+  /* Optional: Style the caret down icon */
+  .fa-caret-down {
+    float: right;
+    padding-right: 8px;
+  } 
+#layout {
+    padding: 0;
+}
+
+.header {
+    text-align: center;
+    top: auto;
+    margin:  auto;
+    height: 300px;
+    border:1px solid #111;
+}
+#wrapper{
+    
+    width:100%;
+    height: 100%;
+
+}
+#top {
+    text-align: center;
+    width: 100%;
+    /*padding-bottom: 3px;*/
+    height: 300px;
+
+}
+#top-navbar {
+    text-align: center;
+    
+    background-color:#bb9d52;
+    height: 60px;
+    border:1px solid #111;
+   
+}
+#top-navbar a{
+    text-align: center;
+	color: rgb(221,254,228);
+    font-size: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#top-navbar a:hover{
+    text-align: center;
+    color:#f1f1f1 ;
+    padding-bottom: 20px;
+   
+    font-size: 20px;
+    text-decoration: none;
+}
+#top-lower{
+    border:1px solid black;
+    height: 300px;
+    width: 100%;
+}
+#picture-frame{
+    margin-top: 140px;
+    margin-left: 40px;
+    width:253px;
+    height: 253px;
+    float: left;
+    border: 2px solid black;
+    background-color: black;
+}
+#middle{
+    width: 100%;
+    height: 800px;
+    margin-top:40px;
+    display: inline-block;
+	
+}
+#left-bar{
+    width:20%;
+    height: 80%;
+    margin-top:30px;
+    border:1px solid black;
+}
+#left-bar p{
+    padding-left: 20px;
+	padding-top:5px;
+	padding-right:5px;
+    margin-left: 5px;
+    font-size: 22px;
+    color: rgb(25, 107, 105);
+	text-transform: uppercase;
+}
+#right-bar{
+    float: right;
+    width: 80%;
+    height: 80%;
+    border:1px solid black;
+    margin-top:30px;
+	background-color: rgb(25, 107, 105);  
+}
+#right-bar  {
+	color: rgb(221,254,228);
+}
+
+
+.sidebar {
+    background: #111;
+    color: #fff;
+}
+
+.brand-title,
+.brand-tagline {
+    margin: 0;
+}
+.brand-title {
+    text-transform: uppercase;
+}
+.brand-tagline {
+    font-weight: 300;
+    color: rgb(176, 202, 219);
+}
+
+
+
+.content-subhead {
+    text-transform: uppercase;
+    color: #aaa;
+    border-bottom: 1px solid #eee;
+    padding: 0.4em 0;
+    font-size: 80%;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+}
+
+.content {
+    padding: 2em 1em 0;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+.post {
+   /* padding-bottom: 10px;*/
+    border: 1px solid black;
+    margin-top: 20px;
+    height: 230px;
+    
+}
+
+.post-title {
+    font-size: 2em;
+    color: #222;
+    border: 1px solid black;
+    margin-bottom: 0.2em;
+    margin-top: 0px;
+}
+.post-avatar {
+    border-radius: 50px;
+    float: right;
+    margin-left: 1em;
+}
+.post-description {
+    font-family: Georgia, "Cambria", serif;
+    color: #444;
+    line-height: 1.8em;
+    margin-top: 0%;
+}
+.post-meta { 
+    color: #999;
+    font-size: 90%;
+    margin: 0;
+}
+
+.post-category {
+    margin: 0 0.1em;
+    padding: 0.3em 1em;
+    color: #fff;
+    background: #999;
+    font-size: 80%;
+}
+    .post-category-design {
+        background: #5aba59;
+    }
+    .post-category-pure {
+        background: #4d85d1;
+    }
+    .post-category-yui {
+        background: #8156a7;
+    }
+    .post-category-js {
+        background: #df2d4f;
+    }
+
+.post-images {
+    margin: 1em 0;
+}
+.post-image-meta {
+    margin-top: -3.5em;
+    margin-left: 1em;
+    color: #fff;
+    text-shadow: 0 1px 1px #333;
+}
+#post-left{
+    height: 100%;
+    width: 222px;
+    border: 1px solid black;
+    float: left;
+}
+#post-right{
+    margin-top: 0px;
+    padding-bottom: 10px;
+    height: 100%;
+    width: 1000px;
+    border: 1px solid black;
+    float: right;
+}
+
+.footer {
+    padding: 1em 0;
+}
+.footer a {
+    color: #ccc;
+    font-size: 80%;
+}
+.footer .pure-menu a:hover,
+.footer .pure-menu a:focus {
+    background: none;
+}
+
+
+
+#search-form-div{
+border:1px solid #818181;
+height: 250px;
+
+
+}
+#search-table{
+    /*border:1px solid black;*/
+    width: 100%;
+    height: 180px;
+
+}
+.checkbox{
+    
+    margin-right:30px;
+    float:right;
+}
+#search-submit{
+    float:right;
+    margin-top:25px;
+    margin-right:25px;
+}
+
+
+
+@media (min-width: 48em) {
+    .content {
+        padding: 2em 3em 0;
+        margin-left: 25%;
+    }
+
+    .header {
+        margin: 80% 2em 0;
+        text-align: right;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+    }
+
+    .footer {
+        text-align: center;
+    }
+}
+.contacts{width:1000px;
+height:auto;
+}
+.location{
+	margin-left:150px;
+	width:400px;
+	height:350px;
+}
+.about{
+	margin-left:150px;
+width:auto;
+height:auto;}
